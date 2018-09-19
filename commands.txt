@@ -1,0 +1,23 @@
+connect-standalone etc/schema-registry/connect-avro-standalone.properties etc/kafka-connect-mssql/mssqlsource.properties
+kafka-console-consumer --bootstrap-server localhost:9092 --topic TableOne --from-beginning
+
+connect-standalone etc/schema-registry/connect-avro-standalone.properties etc/kafka-connect-mongodb/MongoDbSinkConnector.properties etc/kafka-connect-mssql/mssqlsource.properties
+
+-kafka-run-class
+  JAVA="C:/cygwin64/tmp/jre1.8.0_181/bin/java"
+  LOG4J_CONFIG_NORMAL_INSTALL="C:/cygwin64/etc/kafka/log4j.properties"
+
+-confluent.current
+  C:/cygwin64/tmp/confluent.MH95jVJE
+
+-schema-registry
+  JAVA="C:/cygwin64/tmp/jre1.8.0_181/bin/java"
+
+-kafka-rest-run-class
+  JAVA="C:/cygwin64/tmp/jre1.8.0_181/bin/java"
+
+  CLASSPATH="C:/cygwin64/share/java/confluent-common/*;C:/cygwin64/share/java/kafka-rest/*;C:/cygwin64/share/java/rest-utils/*"
+
+  KAFKAREST_LOG4J_OPTS="-Dkafka-rest.log.dir=C:/cygwin64/tmp/confluent.MH95jVJE/kafka-rest/logs -Dlog4j.configuration=file:C:/cygwin64/etc/kafka-rest/log4j.properties"
+
+-ksql-run-class
