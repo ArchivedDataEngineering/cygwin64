@@ -1,0 +1,49 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!README.md
+!commands.txt
+
+# bin/
+!*/bin/confluent
+!*/bin/connect-*
+!*/bin/kafka-*
+!*/bin/ksql
+!*/bin/ksql-*
+!*/bin/schema-registry-*
+!*/bin/zookeeper-*
+
+# etc/
+!*/etc/kafka-connect-*
+!*/etc/kafka-rest
+!*/etc/kafka
+!*/etc/ksql
+!*/etc/schema-registry
+
+# lib/
+!*/lib/systemd
+
+# share/
+!*/share/doc
+!*/share/java/confluent-common
+!*/share/kafka-*
+!*/share/kafka
+!*/share/ksql
+!*/share/rest-utils
+!*/share/schema-registry
+
+# src/
+!*/src
+
+# tmp/
+!*/tmp/confluent.current
+!*/tmp/connect.offsets
+
+# ...even if they are in subdirectories
+#!*/
+
+# if the files to be tracked are in subdirectories
+#!*/a/b/file1.txt
+#!*/a/b/c/*
