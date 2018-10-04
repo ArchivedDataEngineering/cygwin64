@@ -41,9 +41,6 @@
 !*/tmp/confluent.current
 !*/tmp/connect.offsets
 
-# usr/bin/
-!*/usr/bin
-
 # ...even if they are in subdirectories
 #!*/
 
